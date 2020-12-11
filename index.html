@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1 class="main-text">Photo Editor</h1>
+            <h3 class="main-sub-text">Made with <span class="main-word">Html & JS</span></h3>
+            <div class="flex-ctrl-lg">
+                <div class="edit">
+
+                    <div class="text">
+                        <h3>Editing Tools</h3>
+                    </div>
+
+                    <div class="flex-ctrl-sm">
+                        <div class="item-1">
+                            <div class="form-control">
+                                <label for="spacing" class="label">Spacing
+                        <input type="text" class="value-display spacing" value="0" disabled>
+                    </label>
+                                <input type="range" name="spacing" min="0" max="150" class="form-input slider" id="spacing" value="0" data-unit="px">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="blur">Blur
+                        <input type="text" class="value-display blur" value="0">
+                    </label>
+                                <input type="range" name="blur" min="0" max="150" class="form-input slider" id="blur" value="0" data-unit="px">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="brightness">Brightness
+                        <input type="text" class="value-display brightness" value="0">
+                    </label>
+                                <input type="range" name="brightness" min="0" max="150" value="0" class="form-input slider" id="brightness" data-unit="%">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="contrast">
+                        Contrast
+                        <input type="text" class="value-display contrast" value="0">
+                    </label>
+                                <input type="range" name="contrast" min="0" max="150" value="0" class="form-input slider" id="contrast" data-unit="%">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="sepia">Sepia
+                        <input type="text" class="value-display sepia" value="0">
+                    </label>
+                                <input type="range" name="sepia" min="0" max="150" value="0" class="form-input slider" id="sepia" data-unit="%">
+                            </div>
+                        </div>
+
+                        <div class="item-2">
+
+
+                            <div class="form-control">
+                                <label for="grayscale">Grayscale
+                        <input type="text" class="value-display grayscale" value="0">
+                        </label>
+                                <input type="range" name="grayscale" min="0" max="150" value="0" class="form-input slider" id="grayscale" data-unit="%">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="invert">Invert
+                        <input type="text" class="value-display invert" value="0">
+                        </label>
+                                <input type="range" name="invert" min="0" max="150" value="0" class="form-input slider" id="invert" data-unit="%">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="hue-rotate">Hue-rotate
+                        <input type="text" class="value-display hue-rotate" value="0">
+                        </label>
+                                <input type="range" name="hue-rotate" min="0" max="150" value="0" class="form-input slider" id="hue-rotate" data-unit="deg">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="saturate">Saturate
+                        <input type="text" class="value-display saturate" value="0">
+                        </label>
+                                <input type="range" name="saturate" min="0" max="150" value="0" class="form-input slider" id="saturate" data-unit="%">
+                            </div>
+
+                            <div class="form-control">
+                                <label for="color">Color</label>
+                                <input type="color" name="color" class="form-input width-ctrl" value="#0ff074">
+                            </div>
+                            <div class="form-control">
+                                <label for="upload">Upload Image</label>
+                                <input type="file" onchange="loadImg(this)" name="upload" accept="image/*" id="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img.jpg" alt="image" class="img">
+                    <a href="./img.jpg" id="download" download=".img" onclick="update()">Download Image</a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <h3>Created by Adufe Robiu</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
