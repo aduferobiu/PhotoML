@@ -52,10 +52,6 @@ function handleEvent(e) {
     invertShow.value = invert.value
 
 
-    invertShow.addEventListener('keypress', (e) => {
-        console.log(e.target)
-    })
-
 
     // hue-rotate input
     const hueRotateShow = document.querySelector('.hue-rotate')
@@ -71,8 +67,6 @@ function handleEvent(e) {
 
 }
 
-// const imageUpload = document.querySelector('.file').addEventListener('change', loadImg)
-
 function loadImg(input) {
     const fileObject = input.files[0]
     console.log(fileObject)
@@ -80,12 +74,39 @@ function loadImg(input) {
     let reader = new FileReader()
     reader.readAsDataURL(fileObject)
     const img = document.querySelector('.img')
+
     reader.onload = function() {
         img.src = reader.result
+
+        resetProp('spacing')
+        resetProp('blur')
+        resetProp('brightness')
+        resetProp('saturate')
+        resetProp('contrast')
+        resetProp('sepia')
+        resetProp('grayscale')
+        resetProp('invert')
+        resetProp('hue-rotate')
+        resetProp('saturate')
     }
 };
 
+function resetProp(variable) {
+    const elementObj = document.documentElement.style.cssText
+    console.log(elementObj)
+    if (elementObj.includes(`${variable}`)) {
+        document.documentElement.style.removeProperty(`--${variable}`)
+        resetSlider(variable)
+        return console.log('removed')
+    } else {
+        return console.log('Not chnaged')
+    }
+}
 
+function resetSlider(prop) {
+    document.querySelector(`.${prop}`).value = 0
+    document.getElementById(`${prop}`).value = 0
+}
 //JQUERy for the input field
 // function readURL(input) {
 //     if (input.files && input.files[0]) {
