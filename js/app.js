@@ -22,7 +22,7 @@ function handleEvent(e) {
     spacingShow.value = spacing.value
 
 
-    // blur input
+    // blur input 
     const blurShow = document.querySelector('.blur')
     const blur = document.getElementById('blur')
     blurShow.value = blur.value
@@ -93,14 +93,10 @@ function loadImg(input) {
 
 function resetProp(variable) {
     const elementObj = document.documentElement.style.cssText
-    console.log(elementObj)
     if (elementObj.includes(`${variable}`)) {
         document.documentElement.style.removeProperty(`--${variable}`)
         resetSlider(variable)
-        return console.log('removed')
-    } else {
-        return console.log('Not chnaged')
-    }
+    } else {}
 }
 
 function resetSlider(prop) {
