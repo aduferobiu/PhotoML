@@ -73,7 +73,7 @@ body {
     margin-top: 30px;
     margin-bottom: 2rem;
     padding: var(--spacing);
-    background-color: var(--color);
+    background-color: transparent;
     filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) sepia(var(--sepia)) grayscale(var(--grayscale)) invert(var(--invert)) hue-rotate(var(--hue-rotate)) saturate(var(--saturate));
 }
 
@@ -189,6 +189,10 @@ input[type="file"] {
 
 input:disabled {
     background-color: #fff;
+}
+
+.image-download {
+    margin: auto;
 }
 
 @media(min-width: 900px) {

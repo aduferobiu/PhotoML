@@ -104,16 +104,25 @@
                     </div>
                 </div>
                 <div>
-                    <img src="./img.jpg" alt="image" class="img">
-                    <a href="./img.jpg" id="download" download=".img" onclick="update()">Download Image</a>
+                    <div id="fish">
+                        <img src="./img.jpg" alt="image" class="img" id="edited-image">
+                    </div>
+                    <button onclick="update()" id="download">Download Image</button>
                 </div>
             </div>
-            <div class="footer-text">
-                <h3>Created by Adufe Robiu</h3>
+
+            <div class="image-download">
+
+            </div>
+            <div class="main-footer">
+                <div class="footer-text">
+                    <h3>Created by Adufe Robiu</h3>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="./js/html2canvas.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
 

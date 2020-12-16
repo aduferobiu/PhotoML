@@ -1,5 +1,14 @@
+//works with the download button
 function update() {
-    alert('You can only screen shot your edited image for now. Thank for using our app')
+    // alert('You can only screen shot your edited image for now. Thank for using our app')
+    html2canvas(document.querySelector("#fish"), {
+        width: 400,
+        height: outerHeight,
+        backgroundColor: null,
+        scale: 1
+    }).then(canvas => {
+        document.querySelector('.image-download').appendChild(canvas)
+    });
 }
 //selecting all the input
 const inputs = document.querySelectorAll('.form-input')
@@ -75,7 +84,9 @@ function loadImg(input) {
     reader.readAsDataURL(fileObject)
     const img = document.querySelector('.img')
 
+
     reader.onload = function() {
+
         img.src = reader.result
 
         resetProp('spacing')
