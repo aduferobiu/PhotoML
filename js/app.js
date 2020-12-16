@@ -156,3 +156,32 @@ document.querySelector('.remove-about').addEventListener('click', (e) => {
     const about = document.getElementById('about')
     about.style.display = 'none'
 })
+
+//for setting of the Theme
+// document.addEventListener('DOMContentLoaded', () => {
+
+
+const themeStyle = document.getElementById('theme')
+
+const themeToggle = document.getElementById('theme-switcher')
+
+themeToggle.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        if (themeStyle.href.includes('style')) {
+            themeStyle.setAttribute('href', './css/dark.css')
+
+        } else {
+            themeStyle.setAttribute('href', './css/style.css')
+        }
+
+        localStorage.setItem('theme', themeStyle.href)
+    })
+    // })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const getTheme = localStorage.getItem('theme')
+    if (getTheme) {
+        themeStyle.href = `${getTheme}`
+    }
+})

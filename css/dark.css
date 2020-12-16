@@ -20,8 +20,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f1f5f8;
-    color: rgb(18, 17, 17);
+    background-color: hsl(290, 50%, 3%);
+    color: rgb(255, 255, 255);
     line-height: 1.4;
 }
 
@@ -84,8 +84,8 @@ body {
 
 .edit {
     padding: 1rem;
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
+    color: #fff;
     border-radius: 5px;
     text-align: left;
     display: inline-block;
@@ -94,7 +94,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 1rem;
-    box-shadow: 0 2px 4px rgb(159, 159, 159);
+    box-shadow: 0 2px 4px rgb(30, 30, 30);
 }
 
 .form-control {
@@ -180,11 +180,12 @@ input[type="file"] {
     background: linear-gradient(to right, rgb(192, 11, 220), rgb(10, 107, 227));
     color: #fff;
     font-size: 0.9rem;
-    box-shadow: 0 -2px 4px #5f48f5;
+    box-shadow: 0 -1px 4px #5f48f5;
 }
 
 input:disabled {
     background-color: #fff;
+    border: none;
 }
 
 .image-download {
@@ -212,10 +213,10 @@ input:disabled {
 
 .contact-ctrl,
 .about-ctrl {
-    background-color: #fff;
+    background-color: rgb(26, 26, 27);
     width: 400px;
     padding: 1rem;
-    color: #080615;
+    color: #efefef;
     border-radius: 5px;
     transition: all 0.3s 0.2s;
 }
@@ -241,7 +242,7 @@ input:disabled {
     padding: 0.6rem;
     /* border: 1px solid #333333; */
     border: none;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(255, 255, 255);
     margin-top: 1rem;
 }
 
@@ -256,7 +257,7 @@ input:disabled {
 }
 
 .contact-submit {
-    background-color: #080615;
+    background-color: #887cd7;
     border: none;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -279,11 +280,11 @@ input:disabled {
 /* FOR THE NAVBAR */
 
 .main-footer {
-    background-color: rgb(255, 255, 255);
+    background-color: #333;
     padding: 0.3rem;
     text-align: center;
     margin-top: 1.5rem;
-    color: rgb(38, 38, 38);
+    color: rgb(249, 248, 248);
     position: sticky;
     bottom: 0;
     left: 0;
@@ -309,11 +310,11 @@ input:disabled {
     display: block;
     font-family: 'Open Sans', sans-serif;
     margin-top: -0.1rem;
-    color: rgb(97, 74, 120);
+    color: rgb(217, 205, 228);
 }
 
 .footer-text-edit {
-    color: #15047e;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -346,7 +347,7 @@ input:disabled {
 /* Theme Icon  */
 
 .theme-icon {
-    background-color: #ffffff;
+    background-color: #333;
     width: 40px;
     height: 40px;
     position: absolute;
@@ -355,7 +356,7 @@ input:disabled {
     z-index: 111;
     top: 5%;
     right: 5%;
-    color: rgb(66, 58, 81);
+    color: rgb(242, 242, 242);
 }
 
 .theme-icon i {
@@ -363,6 +364,8 @@ input:disabled {
     text-align: center;
     font-size: 1.9rem;
     margin-top: 0.3rem;
+    transform: rotate(180deg);
+    transition: transform 0.3s linear;
 }
 
 @media(min-width: 900px) {

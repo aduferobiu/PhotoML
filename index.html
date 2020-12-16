@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="theme" href="./css/dark.css">
 </head>
 
 <body>
@@ -16,6 +18,7 @@
         <div class="main">
             <h1 class="main-text">Photo Editor</h1>
             <h3 class="main-sub-text">Made with <span class="main-word">Html & JS</span></h3>
+            <div class="theme-icon" id="theme-switcher"><i class="fa fa-adjust"></i></div>
             <div class="flex-ctrl-lg">
                 <div class="edit">
 
@@ -34,14 +37,14 @@
 
                             <div class="form-control">
                                 <label for="blur">Blur
-                        <input type="text" class="value-display blur" value="0">
+                        <input type="text" class="value-display blur" value="0" disabled>
                     </label>
                                 <input type="range" name="blur" min="0" max="150" class="form-input slider" id="blur" value="0" data-unit="px">
                             </div>
 
                             <div class="form-control">
                                 <label for="brightness">Brightness
-                        <input type="text" class="value-display brightness" value="0">
+                        <input type="text" class="value-display brightness" value="0" disabled>
                     </label>
                                 <input type="range" name="brightness" min="0" max="150" value="0" class="form-input slider" id="brightness" data-unit="%">
                             </div>
@@ -49,14 +52,14 @@
                             <div class="form-control">
                                 <label for="contrast">
                         Contrast
-                        <input type="text" class="value-display contrast" value="0">
+                        <input type="text" class="value-display contrast" value="0" disabled>
                     </label>
                                 <input type="range" name="contrast" min="0" max="150" value="0" class="form-input slider" id="contrast" data-unit="%">
                             </div>
 
                             <div class="form-control">
                                 <label for="sepia">Sepia
-                        <input type="text" class="value-display sepia" value="0">
+                        <input type="text" class="value-display sepia" value="0" disabled>
                     </label>
                                 <input type="range" name="sepia" min="0" max="150" value="0" class="form-input slider" id="sepia" data-unit="%">
                             </div>
@@ -67,35 +70,35 @@
 
                             <div class="form-control">
                                 <label for="grayscale">Grayscale
-                        <input type="text" class="value-display grayscale" value="0">
+                        <input type="text" class="value-display grayscale" value="0" disabled>
                         </label>
                                 <input type="range" name="grayscale" min="0" max="150" value="0" class="form-input slider" id="grayscale" data-unit="%">
                             </div>
 
                             <div class="form-control">
                                 <label for="invert">Invert
-                        <input type="text" class="value-display invert" value="0">
+                        <input type="text" class="value-display invert" value="0" disabled>
                         </label>
                                 <input type="range" name="invert" min="0" max="150" value="0" class="form-input slider" id="invert" data-unit="%">
                             </div>
 
                             <div class="form-control">
                                 <label for="hue-rotate">Hue-rotate
-                        <input type="text" class="value-display hue-rotate" value="0">
+                        <input type="text" class="value-display hue-rotate" value="0" disabled>
                         </label>
                                 <input type="range" name="hue-rotate" min="0" max="150" value="0" class="form-input slider" id="hue-rotate" data-unit="deg">
                             </div>
 
                             <div class="form-control">
                                 <label for="saturate">Saturate
-                        <input type="text" class="value-display saturate" value="0">
+                        <input type="text" class="value-display saturate" value="0" disabled>
                         </label>
                                 <input type="range" name="saturate" min="0" max="150" value="0" class="form-input slider" id="saturate" data-unit="%">
                             </div>
 
                             <div class="form-control">
                                 <label for="color">Color</label>
-                                <input type="color" name="color" class="form-input width-ctrl" value="#0ff074">
+                                <input type="color" name="color" class="form-input width-ctrl" value="#385a78">
                             </div>
                             <div class="form-control">
                                 <label for="upload">Upload Image</label>
@@ -150,12 +153,12 @@
                         <a class="remove" id="remove-icon"><i class="fa fa-remove"></i></a>
                     </div>
                 </div>
-                <form>
+                <form name="contact" method="POST" data-netlify="true">
                     <div class="form-group">
-                        <input type="text" placeholder="Tell us your name">
+                        <input type="text" name="name" placeholder="Tell us your name">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email">
+                        <input type="email" name="email" placeholder="Your Email">
                     </div>
                     <div class="form-group">
                         <textarea name="message" cols="30" rows="8" placeholder="Your Messages here"></textarea>
