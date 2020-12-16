@@ -1,14 +1,16 @@
 //works with the download button
 function update() {
-    // alert('You can only screen shot your edited image for now. Thank for using our app')
-    html2canvas(document.querySelector("#fish"), {
-        width: 400,
-        height: outerHeight,
-        backgroundColor: null,
-        scale: 1
-    }).then(canvas => {
-        document.querySelector('.image-download').appendChild(canvas)
-    });
+    alert('You can only screen shot your edited image for now. Thank for using our app')
+
+    //USING the html2canvas library
+    // html2canvas(document.querySelector("#fish"), {
+    //     width: 400,
+    //     height: outerHeight,
+    //     backgroundColor: null,
+    //     scale: 1
+    // }).then(canvas => {
+    //     document.querySelector('.image-download').appendChild(canvas)
+    // });
 }
 //selecting all the input
 const inputs = document.querySelectorAll('.form-input')
@@ -131,3 +133,26 @@ function resetSlider(prop) {
 //handling the request
 inputs.forEach(input => input.addEventListener('change', handleEvent))
     // inputs.forEach(input => input.addEventListener('mousemove', handleEvent))
+
+//click for the contact
+document.getElementById('contact-toggle').addEventListener('click', (e) => {
+    const contact = document.getElementById('contact')
+    contact.style.display = 'block'
+})
+
+document.getElementById('remove-icon').addEventListener('click', (e) => {
+    const contact = document.getElementById('contact')
+    contact.style.display = 'none'
+})
+
+
+//click for the about 
+document.getElementById('about-toggle').addEventListener('click', (e) => {
+    const about = document.getElementById('about')
+    about.style.display = 'block'
+})
+
+document.querySelector('.remove-about').addEventListener('click', (e) => {
+    const about = document.getElementById('about')
+    about.style.display = 'none'
+})

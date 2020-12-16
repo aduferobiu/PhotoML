@@ -7,6 +7,7 @@
     <title>Image Editor</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -114,9 +115,75 @@
             <div class="image-download">
 
             </div>
-            <div class="main-footer">
-                <div class="footer-text">
-                    <h3>Created by Adufe Robiu</h3>
+
+        </div>
+    </div>
+
+    <div class="main-footer">
+        <div class="footer-container">
+            <div class="footer-flex-ctrl">
+                <a href="#" class="footer-text-link">
+                    <div class="footer-text">
+                        <h3>Photo<span class="footer-text-edit">ML</span></h3>
+                    </div>
+                </a>
+                <nav class="navbar">
+                    <ul class="nav-item">
+                        <li class="nav-link"><a id="contact-toggle">Contact</a></li>
+                        <li class="nav-link"><a id="about-toggle">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="contact-ctrl">
+                <div class="contact-header-flex-ctrl">
+                    <div class="contact-header">
+                        <h3 class="contact-title">Contact us</h3>
+                        <p class="contact-lead">Let us hear from you</p>
+                    </div>
+
+                    <div class="contact-remove-icon">
+                        <a class="remove" id="remove-icon"><i class="fa fa-remove"></i></a>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Tell us your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" cols="30" rows="8" placeholder="Your Messages here"></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="about-ctrl">
+                <div class="about-header-flex-ctrl">
+                    <div class="about-header">
+                        <h3 class="about-title">About us</h3>
+                        <p class="about-lead">Some Little info about the project</p>
+                    </div>
+
+                    <div class="contact-remove-icon">
+                        <a class="remove remove-about" id="remove-icon"><i class="fa fa-remove"></i></a>
+                    </div>
+
+                </div>
+                <div class="about-text">
+                    <p>PhotoML is an online Picture Editor made with html and javascript. it updates the css varibale with the editing tools to make your picture to your specification. We are working on the downloading of edited Pics. Thanks for using the
+                        app <i class="fa fa-heart"></i> </p>
+                    <p class="about-text-muted">Created by Adufe Robiu</p>
                 </div>
             </div>
         </div>
