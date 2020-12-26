@@ -7,7 +7,7 @@
  :root {
     --spacing: 10px;
     --blur: 0px;
-    --color: #385a78;
+    --color: #8000ff;
     --brightness: 100%;
     --contrast: 100%;
     --sepia: 0%;
@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
+    background-color: white;
     color: rgb(18, 17, 17);
     line-height: 1.4;
 }
@@ -94,7 +94,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 1rem;
-    box-shadow: 0 2px 4px rgb(159, 159, 159);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form-control {
@@ -121,7 +121,7 @@ label {
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
@@ -217,7 +217,7 @@ input:disabled {
     padding: 1rem;
     color: #080615;
     border-radius: 5px;
-    transition: all 0.3s 0.2s;
+    transition: all 0.8s 0.2s;
 }
 
 .contact-title,
