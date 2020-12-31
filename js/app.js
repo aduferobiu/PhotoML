@@ -157,6 +157,18 @@ document.querySelector('.remove-about').addEventListener('click', (e) => {
     about.style.display = 'none'
 })
 
+//click for the why 
+document.getElementById('why-toggle').addEventListener('click', (e) => {
+    const why = document.getElementById('why')
+    why.style.display = 'block'
+    why.style.transition = 'all 0.8s 0.2s;'
+})
+
+document.querySelector('.remove-why').addEventListener('click', (e) => {
+    const why = document.getElementById('why')
+    why.style.display = 'none'
+})
+
 //for setting of the Theme
 // document.addEventListener('DOMContentLoaded', () => {
 

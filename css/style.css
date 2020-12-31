@@ -7,7 +7,7 @@
  :root {
     --spacing: 10px;
     --blur: 0px;
-    --color: #8000ff;
+    --color: #5f48f5;
     --brightness: 100%;
     --contrast: 100%;
     --sepia: 0%;
@@ -16,6 +16,26 @@
     --opacity: 100%;
     --grayscale: 0%;
     --saturate: 100%;
+}
+
+.mb-2 {
+    margin-top: 0.5rem;
+}
+
+.mb-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
 }
 
 body {
@@ -31,6 +51,111 @@ body {
     place-items: center;
     overflow: hidden;
 }
+
+
+/* FOR THE NAVBAR */
+
+.main-navbar {
+    background-color: #5f48f5;
+    ;
+    padding: 0.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(38, 38, 38);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 11111;
+    box-shadow: 0 -2px 4px #5f48f5;
+    /* border-bottom: 3px solid #d0d0d0; */
+}
+
+.navbar-flex-ctrl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.navbar-container {
+    margin: auto;
+    max-width: 900px;
+}
+
+.navbar-text {
+    margin-top: 1rem;
+    letter-spacing: -0.2rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -0.1rem;
+    color: rgb(255, 255, 255);
+}
+
+.navbar-text-edit {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.navbar-text-link {
+    text-decoration: none;
+}
+
+.nav-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: border 0.05s ease-in;
+}
+
+.nav-link a:last-child {
+    margin-right: 0.5rem;
+}
+
+.nav-link a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+
+/* Theme Icon  */
+
+.theme-icon {
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px #d0d0d0;
+    z-index: 111;
+    top: 10%;
+    right: 5%;
+    color: rgb(66, 58, 81);
+}
+
+.theme-icon i {
+    /* color: #fff; */
+    text-align: center;
+    font-size: 1.9rem;
+    margin-top: 0.3rem;
+    transform: rotate(-180deg);
+    transition: transform 0.3s linear;
+}
+
+
+/* main */
 
 .main {
     text-align: center;
@@ -78,9 +203,6 @@ body {
     background-color: transparent;
     filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) sepia(var(--sepia)) grayscale(var(--grayscale)) invert(var(--invert)) hue-rotate(var(--hue-rotate)) saturate(var(--saturate));
 }
-
-
-/* grayscale(var(--grayscale)) invert(var(--invert)) saturate(var(--saturate)) opacity(var(--opacity)) hue-rotate(var(--hue-rotate)) */
 
 .edit {
     padding: 1rem;
@@ -181,6 +303,26 @@ input[type="file"] {
     color: #fff;
     font-size: 0.9rem;
     box-shadow: 0 -2px 4px #5f48f5;
+    margin-bottom: 0.5rem;
+}
+
+.why-edit {
+    border-bottom: 2px dotted #5f48f5;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #5f48f5;
+}
+
+.why-bg-grad {
+    background: linear-gradient(45deg, #00b09b, #96c93d);
+    width: 30px;
+    /* height: 20px; */
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.why-bg-grad .fa-check {
+    color: #fff;
 }
 
 input:disabled {
@@ -192,7 +334,8 @@ input:disabled {
 }
 
 #contact,
-#about {
+#about,
+#why {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -205,13 +348,15 @@ input:disabled {
 }
 
 .contact-header-flex-ctrl,
-.about-header-flex-ctrl {
+.about-header-flex-ctrl,
+.why-header-flex-ctrl {
     display: flex;
     justify-content: space-between;
 }
 
 .contact-ctrl,
-.about-ctrl {
+.about-ctrl,
+.why-ctrl {
     background-color: #fff;
     width: 400px;
     padding: 1rem;
@@ -221,7 +366,9 @@ input:disabled {
 }
 
 .contact-title,
-.about-title {
+.about-title,
+.why-title,
+{
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
@@ -231,6 +378,12 @@ input:disabled {
     font-family: 'Sacramento', cursive;
     font-size: 1.2rem;
     margin-top: -1rem;
+}
+
+.why-lead {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.2rem;
+    margin-top: -0.6rem;
 }
 
 .form-group input,
@@ -273,105 +426,6 @@ input:disabled {
     font-size: 0.8rem;
     margin-top: 0.5rem;
     font-weight: bold;
-}
-
-
-/* FOR THE NAVBAR */
-
-.main-navbar {
-    background-color: rgb(255, 255, 255);
-    padding: 0.3rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: rgb(38, 38, 38);
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 50px;
-    z-index: 11111;
-    /* box-shadow: 0 -2px 4px #5f48f5; */
-    border-bottom: 3px solid #5f48f5;
-}
-
-.navbar-flex-ctrl {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-}
-
-.navbar-container {
-    margin: auto;
-    max-width: 900px;
-}
-
-.navbar-text {
-    margin-top: 1rem;
-    letter-spacing: -0.2rem;
-    font-weight: bold;
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: -0.1rem;
-    color: rgb(97, 74, 120);
-}
-
-.navbar-text-edit {
-    color: #15047e;
-    font-weight: 700;
-}
-
-.navbar-text-link {
-    text-decoration: none;
-}
-
-.nav-item {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.nav-link a {
-    text-decoration: none;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    cursor: pointer;
-    margin-left: 1.5rem;
-}
-
-.nav-link a:last-child {
-    margin-right: 0.5rem;
-}
-
-.nav-link a:hover {
-    color: #5f48f5;
-}
-
-
-/* Theme Icon  */
-
-.theme-icon {
-    background-color: #ffffff;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px #d0d0d0;
-    z-index: 111;
-    top: 10%;
-    right: 5%;
-    color: rgb(66, 58, 81);
-}
-
-.theme-icon i {
-    /* color: #fff; */
-    text-align: center;
-    font-size: 1.9rem;
-    margin-top: 0.3rem;
-    transform: rotate(-180deg);
-    transition: transform 0.3s linear;
 }
 
 .main-footer {

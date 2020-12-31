@@ -7,7 +7,7 @@
  :root {
     --spacing: 10px;
     --blur: 0px;
-    --color: #8000ff;
+    --color: #5f48f5;
     --brightness: 100%;
     --contrast: 100%;
     --sepia: 0%;
@@ -16,6 +16,26 @@
     --opacity: 100%;
     --grayscale: 0%;
     --saturate: 100%;
+}
+
+.mb-2 {
+    margin-top: 0.5rem;
+}
+
+.mb-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
 }
 
 body {
@@ -78,9 +98,6 @@ body {
     background-color: transparent;
     filter: blur(var(--blur)) brightness(var(--brightness)) contrast(var(--contrast)) sepia(var(--sepia)) grayscale(var(--grayscale)) invert(var(--invert)) hue-rotate(var(--hue-rotate)) saturate(var(--saturate));
 }
-
-
-/* grayscale(var(--grayscale)) invert(var(--invert)) saturate(var(--saturate)) opacity(var(--opacity)) hue-rotate(var(--hue-rotate)) */
 
 .edit {
     padding: 1rem;
@@ -181,6 +198,26 @@ input[type="file"] {
     color: #fff;
     font-size: 0.9rem;
     box-shadow: 0 -1px 4px #5f48f5;
+    margin-bottom: 0.5rem;
+}
+
+.why-edit {
+    border-bottom: 2px dotted #5f48f5;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #5f48f5;
+}
+
+.why-bg-grad {
+    background: linear-gradient(45deg, #00b09b, #96c93d);
+    width: 30px;
+    /* height: 20px; */
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.why-bg-grad .fa-check {
+    color: #fff;
 }
 
 input:disabled {
@@ -193,7 +230,8 @@ input:disabled {
 }
 
 #contact,
-#about {
+#about,
+#why {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -206,13 +244,15 @@ input:disabled {
 }
 
 .contact-header-flex-ctrl,
-.about-header-flex-ctrl {
+.about-header-flex-ctrl,
+.why-header-flex-ctrl {
     display: flex;
     justify-content: space-between;
 }
 
 .contact-ctrl,
-.about-ctrl {
+.about-ctrl,
+.why-ctrl {
     background-color: rgb(26, 26, 27);
     width: 400px;
     padding: 1rem;
@@ -222,13 +262,15 @@ input:disabled {
 }
 
 .contact-title,
-.about-title {
+.about-title,
+.why-title {
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
 
 .contact-lead,
-.about-lead {
+.about-lead,
+.why-lead {
     font-family: 'Sacramento', cursive;
     font-size: 1.2rem;
     margin-top: -1rem;
@@ -340,6 +382,7 @@ input:disabled {
     font-weight: 900;
     cursor: pointer;
     margin-left: 1.5rem;
+    transition: border 0.05s ease-in;
 }
 
 .nav-link a:last-child {
@@ -347,7 +390,7 @@ input:disabled {
 }
 
 .nav-link a:hover {
-    color: #5f48f5;
+    border-bottom: 2px solid #fff;
 }
 
 
