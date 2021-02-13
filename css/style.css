@@ -119,14 +119,29 @@ body {
     cursor: pointer;
     margin-left: 1.5rem;
     transition: border 0.05s ease-in;
+    position: relative;
 }
 
 .nav-link a:last-child {
     margin-right: 0.5rem;
 }
 
-.nav-link a:hover {
-    border-bottom: 2px solid #fff;
+.nav-link a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    color: #fff;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    border-radius: 5px;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link a:hover::after {
+    content: "";
+    width: 100%;
 }
 
 
@@ -307,6 +322,7 @@ input[type="file"] {
 }
 
 .why-edit {
+    display: inline-block;
     border-bottom: 2px dotted #5f48f5;
     text-decoration: none;
     font-size: 0.8rem;
@@ -315,14 +331,15 @@ input[type="file"] {
 
 .why-bg-grad {
     background: linear-gradient(45deg, #00b09b, #96c93d);
-    width: 30px;
-    /* height: 20px; */
+    /* width: 30px; */
+    height: 20px;
     padding: 3px;
     border-radius: 50%;
 }
 
 .why-bg-grad .fa-check {
     color: #fff;
+    font-size: 1.1rem;
 }
 
 input:disabled {
@@ -452,4 +469,50 @@ input:disabled {
     .contact-ctrl {
         width: 600px;
     }
+}
+
+@media(max-width:500px){
+    .edit{
+        width: 400px;
+        margin-right: 0;
+        margin: auto;
+    }
+    .theme-icon{
+        top: 20%;
+        right: 5%;
+    }
+
+.contact-ctrl,
+.about-ctrl,
+.why-ctrl {
+    width: 350px;
+}
+}
+
+@media(max-width:400px){
+    .edit{
+        width: 350px;
+        margin-right: 0;
+        margin: auto;
+    }
+    .img{
+        max-width: 350px;
+    }
+    #download {
+        width: 80%;
+    }
+    
+}
+@media(max-width:340px){
+    .edit{
+        width: 300px;
+    }
+    .img{
+        max-width: 300px;
+    }
+    .contact-ctrl,
+.about-ctrl,
+.why-ctrl {
+    width: 300px;
+}
 }
