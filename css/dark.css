@@ -460,11 +460,6 @@ input:disabled {
     .contact-ctrl {
         width: 600px;
     }
-    .theme-icon{
-        background-color: #333;
-        top: 20%;
-        right: 5%;
-    }
 }
 
 @media(max-width:500px){
@@ -472,11 +467,6 @@ input:disabled {
         width: 400px;
         margin-right: 0;
         margin: auto;
-    }
-    .theme-icon{
-        background-color: #333;
-        top: 20%;
-        right: 5%;
     }
 
 .contact-ctrl,
